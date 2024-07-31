@@ -110,7 +110,7 @@ const HeroFooter = () => {
           graphics.
         </p>
 
-        <h2 className="font-spacegrotesk text-center uppercase tracking-widest mt-4 font-bold text-blue-600">
+        <h2 className="font-spacegrotesk text-xs text-center uppercase tracking-widest mt-4 font-bold text-blue-600">
           <span>
             {" "}
             Let's bring your vision to{" "}
@@ -120,11 +120,11 @@ const HeroFooter = () => {
 
         {/*Start of Beaty*/}
         <div className="relative max-w-full ">
-          <div className="grid my-10  pb-10 md:grid-cols-3 gap-8  max-w-3xl mx-auto">
+          <div className="grid my-10  pb-10 md:grid-cols-3 gap-8  max-w-4xl mx-auto">
             {myImages.map((item, id) => (
               <div key={id} className="z-10">
                 <div
-                  className="group h-[300px] w-52 mx-auto my-5 duration-1000 ease-in-out 
+                  className="group h-[400px] w-64 mx-auto my-5 duration-1000 ease-in-out 
       hover:[perspective:1000px] [perspective:1000px]"
                 >
                   <div
@@ -153,19 +153,27 @@ const HeroFooter = () => {
                     >
                       <div className="absolute  inset-0 ">
                         {/* Description of Images */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center ">
-                          <div className="flex flex-col items-center text-center h-full w-full justify-center ">
-                            <h1 className="uppercase font-sourcecodepro  font-bold  text-white  px-4 rounded-md  text-md">
+                        <div className="absolute inset-0 flex flex-col justify-center items-start border rounded-md border-blue-600/20 hover:border-blue-600/20 ">
+                          <div className="flex flex-col items-start px-4 py-8 text-start h-full w-full justify-start  ">
+                            <h1 className="text-xs lowercase font-spacegrotesk text-blue-500">
+                              {item.heading}
+                            </h1>
+                            <h1 className=" font-sourcecodepro  font-bold  text-white   rounded-md  text-md">
                               {item.title}
                             </h1>
-                            <p className="text-xs  lowercase tracking-wide  font-extralight font-sora  text-slate-300">
+                            <p className="text-xs  lowercase tracking-wide  font-bold font-spacegrotesk  text-black">
                               {" "}
                               {item.description}
                             </p>
+                            <div className="flex items-center mt-4 text-xs justify-center gap-2">
+                              <div className="text-lg text-blue-600 hover:text-red-600">
+                                {item.play}
+                              </div>
+                              <h1 className="hover:text-red-600 text-blue-600">
+                                {item.buttons}
+                              </h1>
+                            </div>
                           </div>
-                          <h4 className="font-sourcecodepro font-bold text-2xl">
-                            {item.Number}
-                          </h4>
                         </div>
                         {/* <img
                         src={item.backgroundImage2}
